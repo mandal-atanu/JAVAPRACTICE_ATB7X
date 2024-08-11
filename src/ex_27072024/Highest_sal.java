@@ -13,7 +13,17 @@ public class Highest_sal {
             System.out.println("Enter the salary of person"+ (i+1));
             salary[i] = src.nextInt();
 
+
         }
+
+        for (int i = 0; i < salary.length ; i++) {
+            System.out.print(salary[i] + " ");
+
+        }
+
+        System.out.println();
+
+
 
         int highest_sal = salary[0];
 
