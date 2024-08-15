@@ -6,7 +6,7 @@ public class RealTimeInhertance {
         Baseclass t1 = new testcase1();
 
         t1.setBrowser("opera",true);
-        t1.openbrowser();
+        t1.openbrowser("chrome");
         t1.closebrowser();
 
     }
@@ -19,7 +19,7 @@ public class RealTimeInhertance {
 class testcase1 extends Baseclass{
 
     testcase1(){
-        super();
+        super("Atanu");
         this.setBrowser("edge",true);
     }
 

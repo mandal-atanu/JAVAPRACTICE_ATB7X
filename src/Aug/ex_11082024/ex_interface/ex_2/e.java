@@ -18,6 +18,10 @@ public interface e {
         System.out.println("M1");
     }
 
+    void m2();
+
+    void m3();
+
 //    void m2(){
 //        System.out.println("complete function not possible in interface");  complete function not possible in interface
 //    }

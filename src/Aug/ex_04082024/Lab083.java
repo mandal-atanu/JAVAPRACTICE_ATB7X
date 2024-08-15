@@ -18,7 +18,7 @@ public class Lab083 {
         System.out.println("enter the your bankcode");
         String Bcode = sc.next();
 
-        BankAccount ba2 = new BankAccount(bankname, blan,Bcode);
+        BankAccount ba2 = new BankAccount(bankname, blan, Bcode);
 
 
         ba1.printdetails();

@@ -1,43 +1,53 @@
 package Aug.ex_11082024.excar;
 
-public class wagonr extends engine{
+public class wagonr extends engine {
 
-    void drive(){
+    void drive() {
         opencar();
-         start();
-         partgearbox();
-         speed();
-         stop();
+        start();
+        partgearbox();
+        speed();
+        stop();
 
     }
 
     @Override
     void opencar() {
-        System.out.println(" the wagonR");
-
-    }
-
-    @Override
-    void start() {
-        System.out.println("Start the wagonR");
-
+        System.out.println("Open wagonr car");
     }
 
     @Override
     void partgearbox() {
-        System.out.println("Change the gear");
-
-    }
-
-    @Override
-    void speed() {
-        System.out.println("Max speed is 100km/h");
+        System.out.println("Part of gear box wagonr");
 
     }
 
     @Override
     void stop() {
-        System.out.println("Stop the wagonR");
+
+        System.out.println("stop the wagonr");
 
     }
+
+    @Override
+    void start() {
+        System.out.println("Start the wagonr");
+
+    }
+
+    @Override
+    void speed() {
+        System.out.println("100km/hr");
+    }
+
 }
+
+
+
+
+
+
+
+
+
+

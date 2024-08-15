@@ -7,5 +7,8 @@ public class lab098 {
         System.out.println(c1);
         c.closebrowser("chrome");
         c.screenshot();
+
+        firefox f = new firefox();
+        f.screenshot();
     }
 }
