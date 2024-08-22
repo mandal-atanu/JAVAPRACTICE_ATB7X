@@ -10,5 +10,6 @@ public class lab098 {
 
         firefox f = new firefox();
         f.screenshot();
+        System.out.println(f.closebrowser("firefox"));
     }
 }

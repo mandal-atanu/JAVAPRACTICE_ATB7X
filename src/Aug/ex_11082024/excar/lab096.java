@@ -6,10 +6,10 @@ public class lab096 {
 //        Tesla t = new Tesla();
 //        t.drivers();
 //
-//        i10 i = new i10();
-//        i.driver();
+        i10 i = new i10();
+        i.driver();
 
-        wagonr wr = new wagonr();
-        wr.drive();
+//        wagonr wr = new wagonr();
+//        wr.drive();
     }
 }

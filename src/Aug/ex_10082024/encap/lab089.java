@@ -6,6 +6,7 @@ public class lab089 {
         icici amit = new icici("amit", 100);
 
         amit.setBal(1000000,true);
+        amit.setBal(1000,false);
 
     }
 }

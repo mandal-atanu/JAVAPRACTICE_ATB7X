@@ -9,6 +9,7 @@ public class Lab102 {
 //    Class
     public static void main(String[] args) {
         System.out.println(ATB.Coursename);
+        ATB.doassignment();
         ATB a1 = new ATB("Atanu");
 
         System.out.println(a1.getName());

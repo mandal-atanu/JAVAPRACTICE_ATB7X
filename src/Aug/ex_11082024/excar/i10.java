@@ -9,4 +9,30 @@ public class i10 extends car{
         stop();
     }
 
+    @Override
+    void partgearbox() {
+        super.partgearbox();
+
+
+    }
+
+    @Override
+    void opencar() {
+        super.opencar();
+    }
+
+    @Override
+    void stop() {
+        super.stop();
+    }
+
+    @Override
+    void start() {
+        super.start();
+    }
+
+    @Override
+    void speed() {
+        super.speed();
+    }
 }
