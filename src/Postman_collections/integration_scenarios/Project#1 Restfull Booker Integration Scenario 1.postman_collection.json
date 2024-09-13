@@ -1,0 +1,226 @@
+{
+	"info": {
+		"_postman_id": "232a8e72-3116-4e7d-82b3-ed047eb96e82",
+		"name": "Project#1 Restfull Booker Integration Scenario 1",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "38005826",
+		"_collection_link": "https://abc333-0743.postman.co/workspace/cfd8e614-cd86-4dd1-acf3-edd488fa92b3/collection/38005826-232a8e72-3116-4e7d-82b3-ed047eb96e82?action=share&source=collection_link&creator=38005826"
+	},
+	"item": [
+		{
+			"name": "Step-1 create new bookings",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log(pm.info.requestName);\r",
+							"\r",
+							"console.log(pm.response.text());\r",
+							"\r",
+							"console.log(pm.response.json());\r",
+							"\r",
+							"console.log(pm.response.headers);\r",
+							"\r",
+							"console.log(pm.response.status);\r",
+							"\r",
+							"console.log(pm.response.code);\r",
+							"\r",
+							"pm.test(\"verify the ststua code for the request is 200 OK\",function(){\r",
+							"    pm.expect(pm.response.code).to.be.equal(200);\r",
+							"})\r",
+							"\r",
+							"\r",
+							"\r",
+							"pm.test(\"verify the firstname\",function(){\r",
+							"    var firstname = pm.response.json()[\"booking\"][\"firstname\"];\r",
+							"    console.log(firstname)\r",
+							"    pm.expect(firstname).to.equal(\"Atanu\")\r",
+							"})\r",
+							"\r",
+							"pm.test(\"verify the bookingid is not null\",function(){\r",
+							"    var bookingid = pm.response.json()[\"bookingid\"];\r",
+							"    console.log(bookingid)\r",
+							"    pm.environment.set(\"ebookingid\",bookingid)\r",
+							"    pm.expect(bookingid).to.not.equal(null)\r",
+							"})\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\" : \"Atanu\",\r\n    \"lastname\" : \"Brownn\",\r\n    \"totalprice\" : 111,\r\n    \"depositpaid\" : true,\r\n    \"bookingdates\" : {\r\n        \"checkin\" : \"2018-01-01\",\r\n        \"checkout\" : \"2019-01-01\"\r\n    },\r\n    \"additionalneeds\" : \"Breakfast\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/booking",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"booking"
+					]
+				},
+				"description": "Generated from cURL: curl -X POST \\\r\n  https://restful-booker.herokuapp.com/booking \\\r\n  -H 'Content-Type: application/json' \\\r\n  -d '{\r\n    \"firstname\" : \"Jim\",\r\n    \"lastname\" : \"Brown\",\r\n    \"totalprice\" : 111,\r\n    \"depositpaid\" : true,\r\n    \"bookingdates\" : {\r\n        \"checkin\" : \"2018-01-01\",\r\n        \"checkout\" : \"2019-01-01\"\r\n    },\r\n    \"additionalneeds\" : \"Breakfast\"\r\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "Step -2 update partial booking-basic auth",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"pm.test(\"Content-Type is present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"pm.test(\"Response time is less than 2000ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(2000);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"verify the firstname\",function(){\r",
+							"    var firstname = pm.response.json()[\"firstname\"];\r",
+							"    console.log(firstname)\r",
+							"    pm.expect(firstname).to.equal(\"James\")\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "password123",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					},
+					{
+						"key": "Cookie",
+						"value": "token=abc123"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic YWRtaW46cGFzc3dvcmQxMjM=",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\" : \"James\",\r\n    \"lastname\" : \"Brown\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/booking/{{ebookingid}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"booking",
+						"{{ebookingid}}"
+					]
+				},
+				"description": "Generated from cURL: curl -X PATCH \\\r\n  https://restful-booker.herokuapp.com/booking/1 \\\r\n  -H 'Content-Type: application/json' \\\r\n  -H 'Accept: application/json' \\\r\n  -H 'Cookie: token=abc123' \\\r\n  -d '{\r\n    \"firstname\" : \"James\",\r\n    \"lastname\" : \"Brown\"\r\n}'"
+			},
+			"response": []
+		},
+		{
+			"name": "Step-3 get bookings",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"verify the firstname\",function(){\r",
+							"    var firstname = pm.response.json()[\"firstname\"];\r",
+							"    console.log(firstname)\r",
+							"    pm.expect(firstname).to.equal(\"James\")\r",
+							"})"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/booking/{{ebookingid}}",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"booking",
+						"{{ebookingid}}"
+					]
+				},
+				"description": "Generated from cURL: curl -i https://restful-booker.herokuapp.com/booking/1"
+			},
+			"response": []
+		}
+	]
+}

@@ -5,7 +5,7 @@ public class Lab127 {
 
         Bank sbi = new Bank("GBP",100);
 
-        Bank icici = new Bank("GBP", 200);
+        Bank icici = new Bank("dollar", 200);
 
         Integer total = sbi.add(icici);
         System.out.println(total);

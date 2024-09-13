@@ -33,9 +33,12 @@ class ATB{
 
     }
 
-    static {
-        System.out.println("Load the class? I will execute");
-    }
+
+  static {
+    System.out.println("Load the class? I will execute");
+   }
+
+
 
 
     private String name;
