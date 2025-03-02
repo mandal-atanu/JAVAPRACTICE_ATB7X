@@ -20,6 +20,10 @@ public class Lab083 {
 
         BankAccount ba2 = new BankAccount(bankname, blan, Bcode);
 
+        BankAccount ba3 = new BankAccount("SBI",1000,"vj");
+
+        ba3.printdetails();
+
 
         ba1.printdetails();
 
