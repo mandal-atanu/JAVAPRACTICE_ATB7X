@@ -2,7 +2,7 @@ package java_coding_practice;
 
 public class consecutive_same_digit {
     public static void main(String[] args) {
-        int start = 10;
+        int start = 100;
         int end = 1000;
 
         System.out.println("Numbers with consecutive digits being the same:");

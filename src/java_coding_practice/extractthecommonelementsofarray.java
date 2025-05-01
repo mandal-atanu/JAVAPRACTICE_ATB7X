@@ -1,6 +1,7 @@
 package java_coding_practice;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class extractthecommonelementsofarray {
 
@@ -22,9 +23,11 @@ public class extractthecommonelementsofarray {
 
         Object[] k = al.toArray();
 
-        for (Object object : k){
-            System.out.println(object);
-        }
+//        for (Object object : k){
+//            System.out.println(object);
+//        }
+
+        System.out.println(Arrays.toString(k));
 
     }
 }

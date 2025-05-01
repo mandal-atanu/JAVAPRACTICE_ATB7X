@@ -2,10 +2,10 @@ package Aug.ex_10082024.poly.methodoverriding;
 
 public class lab091 {
     public static void main(String[] args) {
-        hound h1 = new hound();
+        dog h1 = new hound();
 
         h1.bark();
-        h1.bike();
+        //h1.bike();
 
         dog d1 = new dog();
 

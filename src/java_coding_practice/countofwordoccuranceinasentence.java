@@ -17,11 +17,17 @@ public class countofwordoccuranceinasentence {
         for (String word : words) {
             word = word.toLowerCase(); // Convert to lowercase for case-insensitive counting
             wordCount.put(word, wordCount.getOrDefault(word, 0) + 1);
+
         }
 
         // Print word occurrences
         for (String key : wordCount.keySet()) {
-            System.out.println(key + ": " + wordCount.get(key));
+            if(wordCount.get(key) == 1){
+                System.out.println(key);
+
+            }
+//            System.out.println(key + ": " + wordCount.get(key));
+//            System.out.println(key);
         }
     }
 
