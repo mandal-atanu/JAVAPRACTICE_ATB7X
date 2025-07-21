@@ -4,7 +4,7 @@ public class palindromenumberwithoutusingbuiltinfunction {
 
     public static void main(String[] args) {
 
-        String s = "Ata";
+        String s = "Ata is a";
 
         String r_s = "";
 

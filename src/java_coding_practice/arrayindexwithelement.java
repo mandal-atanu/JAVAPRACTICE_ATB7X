@@ -6,7 +6,7 @@ public class arrayindexwithelement {
 
     public static void main(String[] args) {
 
-        int[] a = {1,3,3,4,5,6,6,7,8,9,9};
+        int[] a = {1,3,3,4,5,6,61,7,8,9,9};
 
         Scanner sc = new Scanner(System.in);
 
