@@ -1,5 +1,8 @@
 package java_coding_practice;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 public class sortingthearrayinascending {
 
     public static void main(String[] args) {
@@ -28,5 +31,13 @@ public class sortingthearrayinascending {
             System.out.println(a[i]);
 
         }
+
+        String[] abc = {"ab","b","acb"};
+
+        Arrays.sort(abc);
+
+        Arrays.sort(abc, Comparator.comparingInt(String::length));
+
+        System.out.println(Arrays.toString(abc));
     }
 }

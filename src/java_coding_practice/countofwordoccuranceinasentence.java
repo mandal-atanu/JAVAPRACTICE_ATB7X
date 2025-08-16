@@ -20,15 +20,37 @@ public class countofwordoccuranceinasentence {
 
         }
 
+        int max = 0;
+
+        String most_frequent = "";
+
         // Print word occurrences
         for (String key : wordCount.keySet()) {
-            if(wordCount.get(key) == 1){
-                System.out.println(key);
+
+            int count = wordCount.get(key);
+            if(count > max){
+                most_frequent = key;
+
+                max = count;
 
             }
+
+            System.out.println(key);
+
+            System.out.println(wordCount.get(key));
+
+
 //            System.out.println(key + ": " + wordCount.get(key));
 //            System.out.println(key);
         }
+
+        System.out.println(most_frequent);
+
+
+
+        for(String key : wordCount.keySet())
+
+            System.out.println( key + "  " + wordCount.get(key));
     }
 
     public static void main(String[] args) {

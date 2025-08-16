@@ -14,7 +14,7 @@ public class arrayindexwithelement {
 
         int n = sc.nextInt();
 
-        boolean result = false;
+        //boolean result = false;
 
 
 
@@ -22,15 +22,15 @@ public class arrayindexwithelement {
 
             if (a[i] == n){
                 System.out.println(i);
-                result = true;
+                //result = true;
             }
 
         }
 
-        if (!result){
-
-            System.out.println("element not found");
-
-        }
+//        if (!result){
+//
+//            System.out.println("element not found");
+//
+//        }
     }
 }
