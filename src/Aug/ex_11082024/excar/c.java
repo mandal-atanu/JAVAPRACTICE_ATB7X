@@ -4,9 +4,9 @@ public class c {
 
     public static void main(String[] args) {
 
-        a abc = new b();
+        b abc = new b();
 
-        abc.b();
+        abc.acc();
 
     }
 

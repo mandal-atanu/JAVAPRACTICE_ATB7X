@@ -12,6 +12,10 @@ public class Sorting_list_using_stream {
 
         List<Integer> sorted_list = l.stream().filter(a->a%2==0).collect(Collectors.toList());
 
+        List<Integer> list = l.stream().sorted().collect(Collectors.toList());
+
         System.out.println(sorted_list);
+
+        System.out.println(list);
     }
 }
